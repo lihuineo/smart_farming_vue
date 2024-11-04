@@ -28,7 +28,9 @@
 								? 'rgba(103, 161, 229, 0.8)'
 								: 'rgba(103, 161, 229, 0.4)',
 					}">
-					<span class="text">农场概述</span>
+					<div class="menu-text">
+						<span class="text">农场概述</span>
+					</div>
 				</div>
 				<div @click="$router.push('/experimentalPlot').catch(err => err), (active = 1)" class="menu-right ml-3"
 					style="cursor: pointer" :style="{
@@ -378,7 +380,7 @@ export default {
 	line-height: 25px;
 	text-align: center;
 	transform: skewX(-45deg);
-	
+
 	.react-before {
 		position: absolute;
 		left: -25px;
@@ -388,7 +390,11 @@ export default {
 		// background: rgba(4, 0, 0, 0.2);
 		transform: skewX(45deg);
 	}
-	
+
+	.menu-text {
+		animation: animText 5s ease-in-out infinite;
+	}
+
 	.text {
 		display: inline-block;
 		transform: skewX(45deg);
