@@ -348,35 +348,6 @@ export default {
 	background: rgba(4, 0, 0, 0.2);
 }
 
-// 平行四边形
-.menu-right {
-	&.react-l-s {
-		text-align: right;
-		width: 100%;
-	}
-
-	font-size: 18px;
-	width: 300px;
-	line-height: 50px;
-	text-align: center;
-	transform: skewX(90deg);
-
-	.react-after {
-		position: absolute;
-		right: -25px;
-		top: 0;
-		height: 50px;
-		width: 50px;
-		background: rgba(4, 0, 0, 0.2);
-		transform: skewX(90deg);
-	}
-
-	.text {
-		display: inline-block;
-		transform: skewX(45deg);
-	}
-}
-
 .date-left {
 	&.date-l-s {
 		text-align: left;
@@ -407,8 +378,7 @@ export default {
 	line-height: 25px;
 	text-align: center;
 	transform: skewX(-45deg);
-	// background: rgba(4, 0, 0, 0.2);
-
+	
 	.react-before {
 		position: absolute;
 		left: -25px;
@@ -418,10 +388,11 @@ export default {
 		// background: rgba(4, 0, 0, 0.2);
 		transform: skewX(45deg);
 	}
-
+	
 	.text {
 		display: inline-block;
 		transform: skewX(45deg);
+		// animation: animText 1s ease infinite;
 	}
 }
 </style>

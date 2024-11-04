@@ -5,8 +5,7 @@ module.exports = defineConfig({
   devServer: {
     hot: false,
     liveReload: false,
-    port: 8099,
-    public: require('os').networkInterfaces()[Object.keys(require('os').networkInterfaces())[0]][1].address + ':' + port
+    port: 8099
   }
 })
  
