@@ -1,0 +1,58 @@
+{
+  "id": "4425945",
+  "name": "数字孪生",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "39138007",
+      "name": "绿化密度",
+      "font_class": "lvhuamidu",
+      "unicode": "e979",
+      "unicode_decimal": 59769
+    },
+    {
+      "icon_id": "39138006",
+      "name": "IDC机架数",
+      "font_class": "IDCjijiashu",
+      "unicode": "e97a",
+      "unicode_decimal": 59770
+    },
+    {
+      "icon_id": "39138005",
+      "name": "自用机架数",
+      "font_class": "ziyongjijiashu",
+      "unicode": "e97b",
+      "unicode_decimal": 59771
+    },
+    {
+      "icon_id": "39138002",
+      "name": "规划装机数",
+      "font_class": "guihuazhuangjishu",
+      "unicode": "e97c",
+      "unicode_decimal": 59772
+    },
+    {
+      "icon_id": "39138004",
+      "name": "容积率",
+      "font_class": "rongjishuai",
+      "unicode": "e97d",
+      "unicode_decimal": 59773
+    },
+    {
+      "icon_id": "39138003",
+      "name": "实际装机数",
+      "font_class": "shijizhuangjishu",
+      "unicode": "e97e",
+      "unicode_decimal": 59774
+    },
+    {
+      "icon_id": "39138001",
+      "name": "建筑密度",
+      "font_class": "jianzhumidu",
+      "unicode": "e97f",
+      "unicode_decimal": 59775
+    }
+  ]
+}
