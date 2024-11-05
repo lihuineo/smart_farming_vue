@@ -29,7 +29,7 @@
 								: 'rgba(103, 161, 229, 0.4)',
 					}">
 					<div class="menu-text">
-						<span class="text">农场概述</span>
+						<span class="text">农场概况</span>
 					</div>
 				</div>
 				<div @click="$router.push('/experimentalPlot').catch(err => err), (active = 1)" class="menu-right ml-3"
