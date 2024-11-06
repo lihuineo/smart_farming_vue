@@ -110,27 +110,6 @@ export function loaderModel (app) {
       },
       {
         type: "glb",
-        url: "model/养殖区/养殖区5.glb",
-        onLoad: (object) => {
-          app.scene.add(object.scene);
-
-          // app.model = object.scene;
-          object.scene.traverse((obj) => {
-            // 将所有模型的材质储存在app.modelMaterials，在后续改变材质使用
-            if (obj.material) {
-              app.modelMaterials[obj.name] = {
-                material: obj.material,
-              };
-              // console.log("材质", app.modelMaterials[obj.name].material.name)
-            }
-            // 将模型的坐标也储存一份，在做楼层动画使用
-            let { x, y, z } = obj.position;
-            obj.position_tmp = { x, y, z };
-          });
-        },
-      },
-      {
-        type: "glb",
         url: "model/办公区/办公区1.glb",
         onLoad: (object) => {
           app.scene.add(object.scene);
