@@ -129,8 +129,8 @@
 				top: auto;
 				bottom: 2%;
 			">
-			<div class="d-flex aside-width py-2">
-				<div @click="$router.push('/').catch(err => err), (active = 0)" class="camera-menu ml-3"
+			<div class="d-flex">
+				<div @click="$router.push('/').catch(err => err), (active = 0)" class="camera-menu-item"
 					style="cursor: pointer" :style="{
 						background:
 							active == 0
@@ -141,7 +141,7 @@
 						<span class="text">镜头A</span>
 					</div>
 				</div>
-				<div @click="$router.push('/experimentalPlot').catch(err => err), (active = 1)" class="camera-menu ml-3"
+				<div @click="$router.push('/experimentalPlot').catch(err => err), (active = 1)" class="camera-menu-item"
 					style="cursor: pointer" :style="{
 						background:
 							active == 1
@@ -150,7 +150,7 @@
 					}">
 					<span class="text">镜头B</span>
 				</div>
-				<div @click="$router.push('/greenhouse').catch(err => err), (active = 2)" class="camera-menu ml-3"
+				<div @click="$router.push('/greenhouse').catch(err => err), (active = 2)" class="camera-menu-item"
 					style="cursor: pointer" :style="{
 						background:
 							active == 2
@@ -159,7 +159,7 @@
 					}">
 					<span class="text">镜头C</span>
 				</div>
-				<div @click="$router.push('/breed').catch(err => err), (active = 3)" class="camera-menu ml-3"
+				<div @click="$router.push('/breed').catch(err => err), (active = 3)" class="camera-menu-item"
 					style="cursor: pointer" :style="{
 						background:
 							active == 3
@@ -397,26 +397,17 @@ export default {
 	height: 100%;
 }
 
-.camera-menu {
+.camera-menu-item {
 	font-size: 18px;
-	width: 100px;
-	height: 25px;
+	width: 30%;
+	height: 30%;
 	line-height: 25px;
 	text-align: center;
-	
+	margin-left: 16px;
+	margin-right: 16px;
+}
 
-	// .react-before {
-	// 	position: absolute;
-	// 	left: -25px;
-	// 	top: 100px;
-	// 	height: 50px;
-	// 	width: 50px;
-	// 	// background: rgba(4, 0, 0, 0.2);
-	// 	transform: skewX(45deg);
-	// }
-
-	.text {
-		display: inline-block;
-	}
+.text {
+	display: inline-block;
 }
 </style>
