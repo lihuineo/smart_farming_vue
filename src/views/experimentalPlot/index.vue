@@ -27,11 +27,7 @@
 				</div>
 			</div>
 			<div class="p-3" style="height: 300px">
-				<QtEchart
-					ref="echartId"
-					:options="lightOption"
-					width="100%"
-				></QtEchart>
+				<QtEchart ref="echartId" :options="lightOption" width="100%"></QtEchart>
 			</div>
 		</dv-border-box-12>
 		<dv-border-box-12 class="box2 box6">
@@ -41,27 +37,80 @@
 				</div>
 			</div>
 			<div class="p-3" style="height: calc(100% - 30px)">
-				<QtEchart
-					ref="echartId"
-					:options="phOption"
-					width="100%"
-				></QtEchart>
+				<QtEchart ref="echartId" :options="phOption" width="100%"></QtEchart>
 			</div>
 		</dv-border-box-12>
-		<!-- <dv-border-box-12 class="box2 box7">
+		<dv-border-box-12 class="box1 box3" style="left: auto; right: 1.72%; width: 300px; height: 360px">
 			<div class="box1-title">
 				<div class="d-flex">
-					<span class="text px-4">空气温湿度</span>
+					<span class="text px-4">控制面板</span>
 				</div>
 			</div>
-			<div class="p-3" style="height: calc(100% - 30px)">
-				<QtEchart
-					ref="echartId"
-					:options="airOption"
-					width="100%"
-				></QtEchart>
+			<div class="p-3" style="height: calc(20% - 30px)">
+				<ul style="margin-top: 25px">
+					<li class="mb-4" style="
+							display: flex;
+							justify-content: space-between;
+							padding-left: 20px;
+							padding-bottom: 10px;
+							border-bottom: 1px solid #418889;
+							font-size: 16px;
+						">
+						<span>温棚风机1</span>
+						<el-switch v-model="fanValue" @change="fanValueChange"> </el-switch>
+					</li>
+					<li class="mb-4" style="
+							display: flex;
+							justify-content: space-between;
+							padding-left: 20px;
+							padding-bottom: 10px;
+							border-bottom: 1px solid #418889;
+							font-size: 16px;
+						">
+						<span>温棚风机2</span>
+						<el-switch v-model="fanValue" @change="fanValueChange"> </el-switch>
+					</li>
+					<li class="mb-4" style="
+							display: flex;
+							justify-content: space-between;
+							padding-left: 20px;
+							padding-bottom: 10px;
+							border-bottom: 1px solid #418889;
+							font-size: 16px;
+						">
+						<span>补光灯1</span>
+						<el-switch v-model="lightValue" @change="lightValueChange"> </el-switch>
+					</li>
+					<li class="mb-4" style="
+							display: flex;
+							justify-content: space-between;
+							padding-left: 20px;
+							padding-bottom: 10px;
+							border-bottom: 1px solid #418889;
+							font-size: 16px;
+						">
+						<span>补光灯2</span>
+						<el-switch v-model="lightValue" @change="lightValueChange"> </el-switch>
+					</li>
+					<li class="mb-4" style="
+							display: flex;
+							justify-content: space-between;
+							padding-left: 20px;
+							padding-bottom: 10px;
+							border-bottom: 1px solid #418889;
+							font-size: 16px;
+						">
+						<span>补光灯3</span>
+						<el-switch v-model="lightValue" @change="lightValueChange"> </el-switch>
+					</li>
+					<li class="mb-4" style="display: flex; justify-content: space-between; 							padding-left: 20px;
+; font-size: 16px;">
+						<span>灌溉系统</span>
+						<el-switch v-model="irrigationValue" @change="irrigationValueChange"> </el-switch>
+					</li>
+				</ul>
 			</div>
-		</dv-border-box-12> -->
+		</dv-border-box-12>
 		<dv-border-box-12 class="box2 box7">
 			<div class="box1-title">
 				<div class="d-flex">
@@ -69,11 +118,7 @@
 				</div>
 			</div>
 			<div class="p-3" style="height: calc(100% - 36px)">
-				<QtEchart
-					ref="echartId"
-					:options="soilOption"
-					width="100%"
-				></QtEchart>
+				<QtEchart ref="echartId" :options="soilOption" width="100%"></QtEchart>
 			</div>
 		</dv-border-box-12>
 	</div>
@@ -206,9 +251,9 @@ export default {
 		},
 		focusOnView() {
 			window.app.flyTo({
-			position: [5.52, 7.05, -17.21],
-			controls: [-1.76, -0.76, -0.69],
-			duration: 3000,
+				position: [5.52, 7.05, -17.21],
+				controls: [-1.76, -0.76, -0.69],
+				duration: 3000,
 			});
 		}
 	},
@@ -298,6 +343,7 @@ export default {
 	margin-top: 5px;
 	font-size: 15px;
 }
+
 .el-carousel {
 	height: 100%;
 }

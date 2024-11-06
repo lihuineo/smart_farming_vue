@@ -64,51 +64,6 @@
 				></QtEchart>
 			</div>
 		</dv-border-box-12>
-		<!-- <dv-border-box-12
-			class="box1 box3"
-			style="left: auto; right: 1.72%; width: 200px; height: 230px"
-		>
-			<div class="box1-title">
-				<div class="d-flex">
-					<span class="text mx-2">控制面板</span>
-				</div>
-			</div>
-			<div class="p-3" style="height: calc(20% - 30px)">
-				<ul style="margin-top: 25px">
-					<li
-						class="mb-4"
-						style="
-							display: flex;
-							justify-content: space-between;
-							padding-bottom: 10px;
-							border-bottom: 1px solid #418889;
-						"
-					>
-						<span>风机开关</span>
-						<el-switch v-model="fanValue" @change="fanValueChange"> </el-switch>
-					</li>
-					<li
-						class="mb-4"
-						style="
-							display: flex;
-							justify-content: space-between;
-							padding-bottom: 10px;
-							border-bottom: 1px solid #418889;
-						"
-					>
-						<span>补光灯开关</span>
-						<el-switch v-model="lightValue" @change="lightValueChange"> </el-switch>
-					</li>
-					<li
-						class="mb-4"
-						style="display: flex; justify-content: space-between"
-					>
-						<span>灌溉开关</span>
-						<el-switch v-model="irrigationValue" @change="irrigationValueChange"> </el-switch>
-					</li>
-				</ul>
-			</div>
-		</dv-border-box-12> -->
 	</div>
 </template>
 
