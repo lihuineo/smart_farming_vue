@@ -121,6 +121,55 @@
 				<QtEchart ref="echartId" :options="soilOption" width="100%"></QtEchart>
 			</div>
 		</dv-border-box-12>
+		<div class="box1 box3" style="
+				right: auto;
+				height: 80px;
+				width: 40%;
+				left: 30%;
+				top: auto;
+				bottom: 2%;
+			">
+			<div class="d-flex aside-width py-2">
+				<div @click="$router.push('/').catch(err => err), (active = 0)" class="camera-menu ml-3"
+					style="cursor: pointer" :style="{
+						background:
+							active == 0
+								? 'rgba(103, 161, 229, 0.8)'
+								: 'rgba(103, 161, 229, 0.4)',
+					}">
+					<div class="menu-text">
+						<span class="text">镜头A</span>
+					</div>
+				</div>
+				<div @click="$router.push('/experimentalPlot').catch(err => err), (active = 1)" class="camera-menu ml-3"
+					style="cursor: pointer" :style="{
+						background:
+							active == 1
+								? 'rgba(103, 161, 229, 0.8)'
+								: 'rgba(103, 161, 229, 0.4)',
+					}">
+					<span class="text">镜头B</span>
+				</div>
+				<div @click="$router.push('/greenhouse').catch(err => err), (active = 2)" class="camera-menu ml-3"
+					style="cursor: pointer" :style="{
+						background:
+							active == 2
+								? 'rgba(103, 161, 229, 0.8)'
+								: 'rgba(103, 161, 229, 0.4)',
+					}">
+					<span class="text">镜头C</span>
+				</div>
+				<div @click="$router.push('/breed').catch(err => err), (active = 3)" class="camera-menu ml-3"
+					style="cursor: pointer" :style="{
+						background:
+							active == 3
+								? 'rgba(103, 161, 229, 0.8)'
+								: 'rgba(103, 161, 229, 0.4)',
+					}">
+					<span class="text">镜头D</span>
+				</div>
+			</div>
+		</div>
 	</div>
 </template>
 
@@ -346,5 +395,28 @@ export default {
 
 .el-carousel {
 	height: 100%;
+}
+
+.camera-menu {
+	font-size: 18px;
+	width: 100px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	
+
+	// .react-before {
+	// 	position: absolute;
+	// 	left: -25px;
+	// 	top: 100px;
+	// 	height: 50px;
+	// 	width: 50px;
+	// 	// background: rgba(4, 0, 0, 0.2);
+	// 	transform: skewX(45deg);
+	// }
+
+	.text {
+		display: inline-block;
+	}
 }
 </style>
