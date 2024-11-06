@@ -1076,7 +1076,7 @@ export const getSoilOption = (val) => {
 export const getPhOption = (val) => {
   var xData = (function () {
     var data = []
-    for (var i = 1; i < 31; i++) {
+    for (var i = 1; i < 10; i++) {
       data.push(i + '日')
     }
     return data
@@ -1114,7 +1114,7 @@ export const getPhOption = (val) => {
           show: false
         },
         axisTick: {
-          show: false
+          show: true
         },
         data: xData
       }
@@ -1122,6 +1122,9 @@ export const getPhOption = (val) => {
 
     yAxis: [
       {
+        max: 12,
+        min: 4,
+        splitNumber: 4,
         type: 'value',
         splitLine: {
           show: false
@@ -1135,9 +1138,9 @@ export const getPhOption = (val) => {
     ],
     series: [
       {
-        name: 'PH值',
+        name: 'pH值',
         type: 'line',
-        symbolSize: 10,
+        symbolSize: 12,
         symbol: 'circle',
         itemStyle: {
           color: '#6f7de3'
@@ -1162,7 +1165,7 @@ export const getPhOption = (val) => {
           ]
         },
         data: [
-          509, 917, 2455, 2610, 2719, 3033, 3044, 3085, 2708, 2809, 2117, 2000, 1455, 1210, 719
+          6.09, 9.17, 6.55, 6.10, 7.19, 7.33, 7.44, 7.85, 7.08, 8.09, 9.17, 8.00, 7.55, 7.21, 7.19
         ]
       }
     ]
