@@ -130,7 +130,7 @@
 				bottom: 2%;
 			">
 			<div class="d-flex">
-				<div @click="$router.push('/').catch(err => err), (active = 0)" class="camera-menu-item"
+				<div @click="focusOnA().catch(err => err), (active = 0)" class="camera-menu-item"
 					style="cursor: pointer" :style="{
 						background:
 							active == 0
@@ -141,7 +141,7 @@
 						<span class="text">镜头A</span>
 					</div>
 				</div>
-				<div @click="$router.push('/experimentalPlot').catch(err => err), (active = 1)" class="camera-menu-item"
+				<div @click="focusOnB().catch(err => err), (active = 1)" class="camera-menu-item"
 					style="cursor: pointer" :style="{
 						background:
 							active == 1
@@ -150,7 +150,7 @@
 					}">
 					<span class="text">镜头B</span>
 				</div>
-				<div @click="$router.push('/greenhouse').catch(err => err), (active = 2)" class="camera-menu-item"
+				<div @click="focusOnC().catch(err => err), (active = 2)" class="camera-menu-item"
 					style="cursor: pointer" :style="{
 						background:
 							active == 2
@@ -159,7 +159,7 @@
 					}">
 					<span class="text">镜头C</span>
 				</div>
-				<div @click="$router.push('/breed').catch(err => err), (active = 3)" class="camera-menu-item"
+				<div @click="focusOnD().catch(err => err), (active = 3)" class="camera-menu-item"
 					style="cursor: pointer" :style="{
 						background:
 							active == 3
@@ -302,6 +302,27 @@ export default {
 			window.app.flyTo({
 				position: [5.52, 7.05, -17.21],
 				controls: [-1.76, -0.76, -0.69],
+				duration: 3000,
+			});
+		},
+		focusOnA() {
+			window.app.flyTo({
+				position: [73.16, 44.52, 73.48],
+				controls: [13.83, -22.17, -4.28],
+				duration: 3000,
+			});
+		},
+		focusOnA() {
+			window.app.flyTo({
+				position: [73.16, 44.52, 73.48],
+				controls: [13.83, -22.17, -4.28],
+				duration: 3000,
+			});
+		},
+		focusOnA() {
+			window.app.flyTo({
+				position: [73.16, 44.52, 73.48],
+				controls: [13.83, -22.17, -4.28],
 				duration: 3000,
 			});
 		}
