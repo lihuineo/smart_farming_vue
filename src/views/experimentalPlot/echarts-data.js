@@ -1082,6 +1082,10 @@ export const getPhOption = (val) => {
     return data
   })()
 
+  var phData = [
+    6.09, 9.17, 6.55, 6.10, 7.19, 7.33, 7.44, 7.85, 7.08, 8.09, 9.17, 8.00, 7.55, 7.21, 7.19
+  ]
+
   let option = {
     tooltip: {
       trigger: 'axis',
@@ -1164,9 +1168,7 @@ export const getPhOption = (val) => {
             }
           ]
         },
-        data: [
-          6.09, 9.17, 6.55, 6.10, 7.19, 7.33, 7.44, 7.85, 7.08, 8.09, 9.17, 8.00, 7.55, 7.21, 7.19
-        ]
+        data: val == null ? val : phData
       }
     ]
   }

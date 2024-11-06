@@ -80,7 +80,7 @@ export function createReprocessing(app) {
 
   const folderBloom = gui.addFolder('辉光');
   folderBloom.close();
-  app.renderer.toneMappingExposure = Math.pow(1.77, 4.0);
+  app.renderer.toneMappingExposure = Math.pow(1.65, 4.0);
 
   folderBloom.add(bloomParams, 'exposure', 0.1, 2).onChange(function(value) {
     app.renderer.toneMappingExposure = Math.pow(value, 4.0);

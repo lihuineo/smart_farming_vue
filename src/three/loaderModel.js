@@ -192,27 +192,6 @@ export function loaderModel (app) {
           });
         },
       },
-      // {
-      //   type: "glb",
-      //   url: "model/办公区/办公区5.glb",
-      //   onLoad: (object) => {
-      //     app.scene.add(object.scene);
-
-      //     // app.model = object.scene;
-      //     object.scene.traverse((obj) => {
-      //       // 将所有模型的材质储存在app.modelMaterials，在后续改变材质使用
-      //       if (obj.material) {
-      //         app.modelMaterials[obj.name] = {
-      //           material: obj.material,
-      //         };
-      //         // console.log("材质", app.modelMaterials[obj.name].material.name)
-      //       }
-      //       // 将模型的坐标也储存一份，在做楼层动画使用
-      //       let { x, y, z } = obj.position;
-      //       obj.position_tmp = { x, y, z };
-      //     });
-      //   },
-      // },
       {
         type: "glb",
         url: "model/土地/小路1.glb",
@@ -383,6 +362,27 @@ export function loaderModel (app) {
       },
       {
         type: "glb",
+        url: "model/土地/土地.glb",
+        onLoad: (object) => {
+          app.scene.add(object.scene);
+
+          // app.model = object.scene;
+          object.scene.traverse((obj) => {
+            // 将所有模型的材质储存在app.modelMaterials，在后续改变材质使用
+            if (obj.material) {
+              app.modelMaterials[obj.name] = {
+                material: obj.material,
+              };
+              // console.log("材质", app.modelMaterials[obj.name].material.name)
+            }
+            // 将模型的坐标也储存一份，在做楼层动画使用
+            let { x, y, z } = obj.position;
+            obj.position_tmp = { x, y, z };
+          });
+        },
+      },
+      {
+        type: "glb",
         url: "model/大棚/大棚.glb",
         onLoad: (object) => {
           app.scene.add(object.scene);
@@ -470,22 +470,50 @@ export function loaderModel (app) {
         url: "model/大棚/大棚植被.glb",
         onLoad: (object) => {
           app.scene.add(object.scene);
-
-          // app.model = object.scene;
-          object.scene.traverse((obj) => {
-            // 将所有模型的材质储存在app.modelMaterials，在后续改变材质使用
-            if (obj.material) {
-              app.modelMaterials[obj.name] = {
-                material: obj.material,
-              };
-              // console.log("材质", app.modelMaterials[obj.name].material.name)
-            }
-            // 将模型的坐标也储存一份，在做楼层动画使用
-            let { x, y, z } = obj.position;
-            obj.position_tmp = { x, y, z };
-          });
         },
       },
+      // {
+      //   type: "glb",
+      //   url: "model/大棚/大棚植被2.glb",
+      //   onLoad: (object) => {
+      //     app.scene.add(object.scene);
+
+      //     // app.model = object.scene;
+      //     object.scene.traverse((obj) => {
+      //       // 将所有模型的材质储存在app.modelMaterials，在后续改变材质使用
+      //       if (obj.material) {
+      //         app.modelMaterials[obj.name] = {
+      //           material: obj.material,
+      //         };
+      //         // console.log("材质", app.modelMaterials[obj.name].material.name)
+      //       }
+      //       // 将模型的坐标也储存一份，在做楼层动画使用
+      //       let { x, y, z } = obj.position;
+      //       obj.position_tmp = { x, y, z };
+      //     });
+      //   },
+      // },
+      // {
+      //   type: "glb",
+      //   url: "model/大棚/大棚植被.glb",
+      //   onLoad: (object) => {
+      //     app.scene.add(object.scene);
+
+      //     // app.model = object.scene;
+      //     object.scene.traverse((obj) => {
+      //       // 将所有模型的材质储存在app.modelMaterials，在后续改变材质使用
+      //       if (obj.material) {
+      //         app.modelMaterials[obj.name] = {
+      //           material: obj.material,
+      //         };
+      //         // console.log("材质", app.modelMaterials[obj.name].material.name)
+      //       }
+      //       // 将模型的坐标也储存一份，在做楼层动画使用
+      //       let { x, y, z } = obj.position;
+      //       obj.position_tmp = { x, y, z };
+      //     });
+      //   },
+      // },
       {
         type: "glb",
         url: "model/日光/日光.glb",
@@ -1210,14 +1238,14 @@ export function loaderModel (app) {
           });
         },
       },
-      {
-        type: "glb",
-        url: "model/背景/地面.glb",
-        onLoad: (object) => {
-          app.scene.add(object.scene);
+      // {
+      //   type: "glb",
+      //   url: "model/背景/地面.glb",
+      //   onLoad: (object) => {
+      //     app.scene.add(object.scene);
 
-        },
-      },
+      //   },
+      // },
 
     ];
     console.log("存储的材质", app.modelMaterials);

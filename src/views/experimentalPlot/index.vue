@@ -31,7 +31,7 @@
 			</div>
 		</dv-border-box-12>
 		<dv-border-box-12 class="box2 box6">
-			<div class="box1-title">
+			<div class="box1-title" v-if="isReloadData">
 				<div class="d-flex">
 					<span class="text px-4">土壤pH</span>
 				</div>
@@ -231,6 +231,7 @@ export default {
 					},
 				},
 			],
+			isReloadData: true,
 		};
 	},
 	computed: {},
@@ -312,14 +313,31 @@ export default {
 				duration: 3000,
 			});
 		},
-		focusOnA() {
+		focusOnB() {
+			window.app.flyTo({
+				position: [73.16, 44.52, 73.48],
+				controls: [13.83, -22.17, -4.28],
+				duration: 3000,
+			});
+			var phData = [
+				11.09, 9.17, 9.55, 9.10, 9.19, 9.33, 9.44, 8.85, 9.08, 7.09, 9.17, 10.00, 11.55, 10.21, 10.19
+			];
+			// this.phOption = getPhOption(phData);
+			setOptions(phData);
+			// this.$refs.phChart.$forceUpdate();
+			this.isReloadData = false
+			this.$nextTick(()=>{
+				this.isReloadData = true;
+			})
+		},
+		focusOnC() {
 			window.app.flyTo({
 				position: [73.16, 44.52, 73.48],
 				controls: [13.83, -22.17, -4.28],
 				duration: 3000,
 			});
 		},
-		focusOnA() {
+		focusOnD() {
 			window.app.flyTo({
 				position: [73.16, 44.52, 73.48],
 				controls: [13.83, -22.17, -4.28],
