@@ -50,14 +50,14 @@
 					}">
 					<span class="text">温棚监测</span>
 				</div>
-				<div @click="$router.push('/devices').catch(err => err), (active = 3)" class="menu-right ml-3"
+				<div @click="$router.push('/breed').catch(err => err), (active = 3)" class="menu-right ml-3"
 					style="cursor: pointer" :style="{
 						background:
 							active == 3
 								? 'rgba(103, 161, 229, 0.8)'
 								: 'rgba(103, 161, 229, 0.4)',
 					}">
-					<span class="text">设备运维</span>
+					<span class="text">养殖监测</span>
 				</div>
 			</div>
 		</div>

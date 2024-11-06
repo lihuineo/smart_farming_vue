@@ -41,12 +41,12 @@ const routes = [
 		],
 	},
 	{
-		path: '/devices',
+		path: '/breed',
 		component: Layout,
 		children: [
 			{
 				path: '',
-				component: () => import('@/views/devices'),
+				component: () => import('@/views/breed'),
 				name: '设备运维',
 				meta: { title: '设备运维', icon: 'dashboard', affix: true },
 			}
