@@ -6,6 +6,6 @@ module.exports = defineConfig({
     hot: false,
     liveReload: false,
     port: 8099
-  }  
+  }
 })
  
