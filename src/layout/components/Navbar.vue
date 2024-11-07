@@ -39,7 +39,9 @@
 								? 'rgba(103, 161, 229, 0.8)'
 								: 'rgba(103, 161, 229, 0.4)',
 					}">
-					<span class="text">稻田监测</span>
+					<div class="menu-text">
+						<span class="text">稻田监测</span>
+					</div>
 				</div>
 				<div @click="$router.push('/greenhouse').catch(err => err), (active = 2)" class="menu-right ml-3"
 					style="cursor: pointer" :style="{
@@ -48,7 +50,9 @@
 								? 'rgba(103, 161, 229, 0.8)'
 								: 'rgba(103, 161, 229, 0.4)',
 					}">
-					<span class="text">温棚监测</span>
+					<div class="menu-text">
+						<span class="text">温棚监测</span>
+					</div>
 				</div>
 				<div @click="$router.push('/breed').catch(err => err), (active = 3)" class="menu-right ml-3"
 					style="cursor: pointer" :style="{
@@ -57,7 +61,9 @@
 								? 'rgba(103, 161, 229, 0.8)'
 								: 'rgba(103, 161, 229, 0.4)',
 					}">
-					<span class="text">养殖监测</span>
+					<div class="menu-text">
+						<span class="text">养殖监测</span>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -392,7 +398,19 @@ export default {
 	}
 
 	.menu-text {
-		animation: animText 5s ease-in-out infinite;
+		animation: siz 3s linear infinite;
+	}
+
+	@keyframes siz {
+		from {
+			transform: scale(0.8);
+		}
+
+		to {
+			transform: scale(1.0);
+		}
+
+
 	}
 
 	.text {
