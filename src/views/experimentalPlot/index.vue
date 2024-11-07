@@ -130,43 +130,53 @@
 				bottom: 2%;
 			">
 			<div class="d-flex">
-				<div @click="focusOnA().catch(err => err), (active = 0)" class="camera-menu-item"
+				<div @click="focusOnA().catch(err => err), (active = 5)" class="camera-menu-item"
 					style="cursor: pointer" :style="{
 						background:
-							active == 0
+							active == 5
 								? 'rgba(103, 161, 229, 0.8)'
-								: 'rgba(103, 161, 229, 0.4)',
+								: 'rgba(0, 0, 229, 0.4)',
 					}">
 					<div class="menu-text">
+						<img src="./../../assets/image/camera.png" class="icon-style">
 						<span class="text">镜头A</span>
 					</div>
 				</div>
-				<div @click="focusOnB().catch(err => err), (active = 1)" class="camera-menu-item"
+				<div @click="focusOnB().catch(err => err), (active = 6)" class="camera-menu-item"
 					style="cursor: pointer" :style="{
 						background:
-							active == 1
+							active == 6
 								? 'rgba(103, 161, 229, 0.8)'
-								: 'rgba(103, 161, 229, 0.4)',
+								: 'rgba(103, 0, 229, 0.4)',
 					}">
-					<span class="text">镜头B</span>
+					<div class="menu-text">
+						<img src="./../../assets/image/camera.png" class="icon-style">
+						<span class="text">镜头B</span>
+					</div>
 				</div>
-				<div @click="focusOnC().catch(err => err), (active = 2)" class="camera-menu-item"
+				<div @click="focusOnC().catch(err => err), (active = 7)" class="camera-menu-item"
 					style="cursor: pointer" :style="{
 						background:
-							active == 2
+							active == 7
 								? 'rgba(103, 161, 229, 0.8)'
-								: 'rgba(103, 161, 229, 0.4)',
+								: 'rgba(0, 0, 229, 0.4)',
 					}">
-					<span class="text">镜头C</span>
+					<div class="menu-text">
+						<img src="./../../assets/image/camera.png" class="icon-style">
+						<span class="text">镜头C</span>
+					</div>
 				</div>
-				<div @click="focusOnD().catch(err => err), (active = 3)" class="camera-menu-item"
+				<div @click="focusOnD().catch(err => err), (active = 8)" class="camera-menu-item"
 					style="cursor: pointer" :style="{
 						background:
-							active == 3
+							active == 8
 								? 'rgba(103, 161, 229, 0.8)'
-								: 'rgba(103, 161, 229, 0.4)',
+								: 'rgba(103, 161, 0, 0.4)',
 					}">
-					<span class="text">镜头D</span>
+					<div class="menu-text">
+						<img src="./../../assets/image/camera.png" class="icon-style">
+						<span class="text">镜头D</span>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -232,6 +242,7 @@ export default {
 				},
 			],
 			isReloadData: true,
+			active: 5,
 		};
 	},
 	computed: {},
@@ -326,7 +337,7 @@ export default {
 			setOptions(phData);
 			// this.$refs.phChart.$forceUpdate();
 			this.isReloadData = false
-			this.$nextTick(()=>{
+			this.$nextTick(() => {
 				this.isReloadData = true;
 			})
 		},
@@ -437,16 +448,25 @@ export default {
 }
 
 .camera-menu-item {
-	font-size: 18px;
+	font-size: 20px;
 	width: 30%;
 	height: 30%;
 	line-height: 25px;
 	text-align: center;
 	margin-left: 16px;
 	margin-right: 16px;
+	border-radius: 20px;
+	overflow: hidden;
 }
 
 .text {
 	display: inline-block;
+	margin-left: 8px;
+}
+
+.icon-style {
+	padding-left: 0%;
+	width: 20%;
+	height: 20%;
 }
 </style>
