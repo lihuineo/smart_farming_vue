@@ -55,7 +55,7 @@ export default {
 			init: false,
 			controls: [
 				{
-					name: "首页",
+					name: '首页',
 					goFunction: () => {
 						window.app.flyTo({
 							position: app.cameraPostion,
@@ -63,8 +63,8 @@ export default {
 							duration: 1000,
 						});
 					},
-					backFunction: () => { },
-				}
+					backFunction: () => {},
+				},
 			],
 		};
 	},
@@ -345,7 +345,7 @@ export default {
 			app.initOrbitControls();
 			app.initLight();
 			window.app = app;
-			app.cameraPostion = [73.16, 44.52, 73.48]; 
+			app.cameraPostion = [73.16, 44.52, 73.48];
 			app.controlsTarget = [13.83, -22.17, -4.28];
 			app.initLight();
 			clock = new THREE.Clock();
@@ -413,20 +413,20 @@ export default {
 		focusOnView() {
 			if (self.init) {
 				window.app.flyTo({
-				position: [73.16, 44.52, 73.48],
-				controls: [13.83, -22.17, -4.28],
-				duration: 3000,
+					position: [73.16, 44.52, 73.48],
+					controls: [13.83, -22.17, -4.28],
+					duration: 3000,
 				});
 			}
-		}
+		},
 	},
 	mounted() {
 		this.initZThree();
 	},
 	watch: {
-		'$route': {
+		$route: {
 			handler: 'focusOnView',
-			immediate: true
+			immediate: true,
 		},
 	},
 };
