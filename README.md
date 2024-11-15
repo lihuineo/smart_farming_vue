@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 # smart_farming
-=======
-# project
 
 ## Project setup
 ```
